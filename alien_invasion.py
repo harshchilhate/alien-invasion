@@ -2,6 +2,7 @@ import sys
 import pygame
 from settings import Settings
 from ship import Ship
+from bullet import Bullet
 
 class AlienInvasion:
     #overall class to manage game assets and behaviour
@@ -16,8 +17,8 @@ class AlienInvasion:
         pygame.display.set_caption("Alien Invasion")
 
         self.ship = Ship(self)
+        self.bullets = pygame.sprite.Group()
 
-        
         #set background colour 
         self.bg_colour = (230,230,230)
         
@@ -26,6 +27,7 @@ class AlienInvasion:
         while True:
             self._check_events()
             self.ship.update()
+            self.bullets.update()
             self._update_screen()
             self.clock.tick(200)
 
@@ -38,6 +40,8 @@ class AlienInvasion:
                      self._check_keydown_events(event)
                 elif event.type == pygame.KEYUP:
                      self._check_keyup_events(event)
+                elif event.type == pygame.K_SPACE:
+                    self._fire_bullet()
                     
 
     def _check_keydown_events(self, event):
@@ -53,11 +57,19 @@ class AlienInvasion:
             self.ship.moving_right = False
          elif event.key == pygame.K_LEFT:
             self.ship.moving_left = False
+
+
+    def _fire_bullet(self):
+        """create new bullet and add bullet to the group"""
+        new_bullet = Bullet(self)
+        self.bullets.add(new_bullet)
                      
 
     def _update_screen(self):
          #update images on the screen, and filp to the new screen  
             self.screen.fill(self.settings.bg_colour)
+            for bullet in self.bullets.sprites():
+                bullet.draw_bullet()
             self.ship.blitme()
              
             pygame.display.flip()
