@@ -41,3 +41,9 @@ ________________________________________________________________________________
 This project uses : pygame==2.x
 
 Install everything using : pip install -r requirements.txt
+__________________________________________________________________________________________________________________
+
+📘 Notes
+- This is a learning project, not an original game.
+- The purpose is to practice clean code structure, Pygame basics, and class-based design.
+- Code will be improved and expanded as I progress.
