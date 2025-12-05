@@ -31,8 +31,16 @@ class AlienInvasion:
             self.ship.update()
             self.bullets.update()
             self._update_bullets()
+            self._update_aliens()
             self._update_screen()
             self.clock.tick(200)
+
+    
+    def _update_aliens(self):
+        """check if the fleet is at an edge, update the positions."""
+        self._check_fleet_edges()
+        self.aliens.update()
+
 
     def _check_events(self):
         #respond to the keypresses and mouse events
@@ -119,6 +127,20 @@ class AlienInvasion:
             if bullet.rect.bottom <= 0:
                 self.bullets.remove(bullet)
 
+
+    def _check_fleet_edges(self):
+        """respond appropriately if any aliens have reached an edge."""
+        for alien in self.aliens.sprites():
+            if alien.check_edges():
+                self._change_fleet_direction()
+                break
+
+
+    def _change_fleet_direction(self):
+        """drop the entire fleet and chnge the fleet's direction"""
+        for alien in self.aliens.sprites():
+            alien.rect.y += self.settings.fleet_drop_speed
+        self.settings.fleet_direction *= -1
 
 
 if __name__ == '__main__':
