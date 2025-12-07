@@ -12,7 +12,7 @@ class Settings:
         self.ship_speed = 1.5
 
         #Bullet settings
-        self.bullet_speed = 2.0
+        self.bullet_speed = 2.5
         self.bullet_width = 5
         self.bullet_height = 20
         self.bullet_colour = (165,95,55)
