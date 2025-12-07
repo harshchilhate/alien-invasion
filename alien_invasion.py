@@ -86,7 +86,7 @@ class AlienInvasion:
         alien_width ,alien_height  = alien.rect.size
 
         current_x, current_y = alien_width, alien_height
-        while current_y < (self.settings.screen_height - 3 * alien_height):
+        while current_y < ((self.settings.screen_height * 0.90 ) - (3 * alien_height)):
             while current_x < (self.settings.screen_width - 2 * alien_width):
                 self._create_alien(current_x, current_y)
                 current_x += 2 * alien_width
@@ -118,7 +118,7 @@ class AlienInvasion:
          
 
     def _update_bullets(self):
-        """update position of bullets, get rid of old bullet and manage collisions """
+        """update position of bullets and get rid of old bullet"""
         #update bullet positions
         self.bullets.update()
         
@@ -127,8 +127,12 @@ class AlienInvasion:
             if bullet.rect.bottom <= 0:
                 self.bullets.remove(bullet)
 
-        #check for any bullets that have hit alien
-        #if so, get rid of the alien and the bullet
+        self._check_bullet_alien_collisons()
+
+        
+    def _check_bullet_alien_collisons(self):
+        """respond to bullet-alien collisions."""
+        #remove any bullets and aliens that have collided
         collisions = pygame.sprite.groupcollide(
             self.bullets, self.aliens, True, True)
         
