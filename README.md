@@ -62,35 +62,9 @@ ________________________________________________________________________________
 This project uses : pygame==2.x
 
 Install everything using : pip install -r requirements.txt
+__________________________________________________________________________________________________________________
 
-_________________________________________________________________________________________________________________
-
-🗂 Project Structure
-
-alien-invasion/
-│
-├── alien_invasion.py      # Main game loop + fleets + collisions
-├── settings.py            # All configurable game settings
-├── ship.py                # Player ship logic
-├── alien.py               # Alien behavior + movement
-├── bullet.py              # Bullet mechanics
-├── game_stats.py          # Tracks remaining ships / game over
-├── images/                # Game image assets
-│   ├── ship.bmp
-│   ├── alien.bmp
-│ 
-└── README.md
-
-_________________________________________________________________________________________________________________
-
-📘 About This Project
-
-This repository reflects my progress through the Pygame + OOP section of
-Python Crash Course.
-
-The implementation closely follows the book, with minor improvements based on my own understanding.
-The main objective was to:
-- Learn proper project structure
-- Practice OOP in a real application
-- Understand game loops and rendering
-- Use Git/GitHub professionally
+📘 Notes
+- This is a learning project, not an original game.
+- The purpose is to practice clean code structure, Pygame basics, and class-based design.
+- Code will be improved and expanded as I progress.
