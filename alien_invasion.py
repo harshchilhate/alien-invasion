@@ -87,6 +87,9 @@ class AlienInvasion:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     sys.exit()
+                elif event.type == pygame.MOUSEBUTTONDOWN:
+                    mouse_pos = pygame.mouse.get_pos()
+                    self._check_play_button(mouse_pos)
                 elif event.type == pygame.KEYDOWN:
                      self._check_keydown_events(event)
                 elif event.type == pygame.KEYUP:
@@ -110,6 +113,10 @@ class AlienInvasion:
          elif event.key == pygame.K_LEFT:
             self.ship.moving_left = False
 
+    def _check_play_button(self, mouse_pos):
+        """Start a new game when the player clicks Play."""
+        if self.play_button.rect.collidepoint(mouse_pos):
+            self.game_active = True
 
     def _fire_bullet(self):
         """create new bullet and add bullet to the group"""
