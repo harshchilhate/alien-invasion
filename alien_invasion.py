@@ -80,6 +80,7 @@ class AlienInvasion:
             sleep(0.8)
         else:
             self.game_active = False
+            pygame.mouse.set_visible(True)
 
 
     def _check_events(self):
@@ -126,6 +127,9 @@ class AlienInvasion:
             #create a new fleet and center the ship.
             self._create_fleet()
             self.ship.centre_ship()
+
+            #Hide the mouse cursor
+            pygame.mouse.set_visible(False)
 
     def _fire_bullet(self):
         """create new bullet and add bullet to the group"""
