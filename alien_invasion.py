@@ -131,6 +131,7 @@ class AlienInvasion:
         """Start a new game when the player clicks Play."""
         #reset the game statistics.
         self.stats.reset_stats()
+        self.sb.prep_score()
         self.game_active = True
 
         #get rid of any remaining bullets and aliens.
