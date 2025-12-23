@@ -40,7 +40,7 @@ class Scoreboard:
 
         #Center the high score at the top of the screen.
         self.high_score_rect = self.high_score_image.get_rect()
-        self.high_score_rect.centerx = self.high_score_rect.centerx
+        self.high_score_rect.centerx = self.screen_rect.centerx
         self.high_score_rect.top = self.score_rect.top
 
         
