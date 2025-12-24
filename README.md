@@ -58,14 +58,13 @@ ________________________________________________________________________________
 
 ## 🎮 Controls
 
-| Action           |     Key / Input         |
-|------------------|-------------------------|
-| Move Left        |     ← Left Arrow        |
-| Move Right       |     → Right Arrow       |
-| Fire Bullet      |       Spacebar          |
-| Start Game       |       Press P , OR      |      
-                   |  Mouse Click on [Play]  |
-| Quit Game        |          `Q`            |
+| Action           |     Key / Input                 |
+|------------------|---------------------------------|
+| Move Left        |     ← Left Arrow                |
+| Move Right       |     → Right Arrow               |
+| Fire Bullet      |       Spacebar                  |
+| Start Game       | Press P / Mouse Click on [Play] |     
+| Quit Game        |          `Q`                    |
 
 > Maximum of 3 bullets can exist on screen at once.
 
