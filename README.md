@@ -84,6 +84,28 @@ This logic is handled using the `GameStats` class.
 
 _______________________________________________________________________________________________________________________________
 
+
+🗂 Project Structure
+
+alien-invasion/
+│
+├── alien_invasion.py      # Main game loop and event handling
+├── settings.py            # All configurable game settings
+├── ship.py                # Player ship logic
+├── alien.py               # Alien behavior and movement
+├── bullet.py              # Bullet mechanics
+├── game_stats.py          # Tracks lives and game state
+├── scoreboard.py          # Score, high score, and level display
+├── button.py              # Play button UI
+├── images/                # Game image assets
+│   ├── ship.bmp
+│   ├── alien.bmp
+│
+├── requirements.txt
+└── README.md
+
+___________________________________________________________________________________________________________________________________
+
 ▶️ How to Run
 
 Requirements
