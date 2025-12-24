@@ -231,10 +231,13 @@ class AlienInvasion:
             self.bullets.empty()
             self._create_fleet()
             self.settings.increase_speed()
+            self.start_new_level()
 
-            #Increasr level
-            self.stats.level += 1
-            self.sb.prep_level()
+
+    def start_new_level(self):
+        """Increase level"""
+        self.stats.level += 1
+        self.sb.prep_level()
         
 
     def _check_fleet_edges(self):
