@@ -63,8 +63,8 @@ ________________________________________________________________________________
 | Move Left        |     ← Left Arrow        |
 | Move Right       |     → Right Arrow       |
 | Fire Bullet      |       Spacebar          |
-| Pause / Resume   |          `P`            |
-| Start Game       |  Mouse Click on [Play]  |
+| Start Game       |       Press P , OR      |      
+                   |  Mouse Click on [Play]  |
 | Quit Game        |          `Q`            |
 
 > Maximum of 3 bullets can exist on screen at once.
