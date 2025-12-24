@@ -131,6 +131,7 @@ class AlienInvasion:
         """Start a new game when the player clicks Play."""
         #reset the game statistics.
         self.stats.reset_stats()
+        self.sb.prep_level()
         self.sb.prep_score()
         self.game_active = True
 
@@ -228,6 +229,10 @@ class AlienInvasion:
             self.bullets.empty()
             self._create_fleet()
             self.settings.increase_speed()
+
+            #Increasr level
+            self.stats.level += 1
+            self.sb.prep_level()
         
 
     def _check_fleet_edges(self):
